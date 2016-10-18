@@ -24,6 +24,7 @@ public class Ch6Ex4 {
 		else
 			System.out.println("다시 입력하세요");
 
-	}
+  	}
 
-	}}
+}
+}
