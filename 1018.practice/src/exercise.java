@@ -6,6 +6,7 @@ public class exercise {
 System.out.println("aaaaaa123aaaaaaaaaddddda");
 System.out.println("aaaaaaaasdasdaa1231asd125435a");
 System.out.println("¿Ö");
+System.out.println("¿Ö");
 	}
 
 }
