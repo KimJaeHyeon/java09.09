@@ -17,6 +17,7 @@ public class Ch6Ex2 {
 			sb.append(i);
 		}
 		System.out.println(sb.toString());
+		
 	}
-
+	
 }
