@@ -1,4 +1,4 @@
-
+/*
 public class exercise {
 
 	public static void main(String[] args) {
@@ -8,3 +8,4 @@ System.out.println("aaaaaaaaa1231asd125435a");
 	}
 
 }
+*/
