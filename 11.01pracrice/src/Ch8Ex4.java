@@ -4,11 +4,11 @@ import javax.swing.*;
 
 public class Ch8Ex4 extends JFrame{
 	
-	JButton button1 = new JButton("버툰1");
-	JButton button2 = new JButton("버툰2");
-	JButton button3 = new JButton("버툰3");
-	JButton button4 = new JButton("버툰4");
-	JButton button5 = new JButton("버툰5");
+	JButton button1 = new JButton("버튼1");
+	JButton button2 = new JButton("버튼2");
+	JButton button3 = new JButton("버튼3");
+	JButton button4 = new JButton("버튼4");
+	JButton button5 = new JButton("버튼5");
 	
 	Panel p1 = new Panel();
 	Panel p2 = new Panel();
