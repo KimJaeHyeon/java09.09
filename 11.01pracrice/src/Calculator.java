@@ -29,7 +29,7 @@ class calc  implements ActionListener
 		cal.layout();
 	}
 	
-	public calc(){   //계산기 클래스 생성
+	public calc(){   //계산기 클래스 생성 
 		frame=new JFrame("Calculator_by_김재현");
 		menuBar=new JMenuBar();
 
@@ -40,10 +40,19 @@ class calc  implements ActionListener
 	
 		
 		menu=new JMenu("메뉴1");		    //메뉴부분
-		JMenu menu1 = new JMenu("대화상자(P)");
-		JMenuItem item1 = new JMenuItem("Open");
-	  item1.setMnemonic('o');
-		menu2=new JMenu("메뉴2");
+		 JMenuItem item1 = new JMenuItem("서브메뉴1-1");
+		 JMenuItem item2 = new JMenuItem("서브메뉴1-2");
+		 item1.setMnemonic('o');
+		 menu.add(item1);
+		 menu.add(item2);
+	
+	  	menu2=new JMenu("메뉴2");
+		 JMenuItem item3 = new JMenuItem("서브메뉴2-1");
+		 JMenuItem item4 = new JMenuItem("서브메뉴2-2");
+		 item2.setMnemonic('o');
+		 menu2.add(item3);
+		 menu2.add(item4);
+		 
 		
 	}
 
@@ -142,7 +151,7 @@ class calc  implements ActionListener
 			}
 			
 		}catch(Exception ex){
-			textField.setText("Error 다시입력 C클릭."); 
+			textField.setText("잘못된 입력 C를 누르시오."); 
 			textField.getText(); 
 		}
 	
