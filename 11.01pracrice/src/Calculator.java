@@ -2,7 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-
+import javax.swing.JMenu.*;
+;
 class calc  implements ActionListener
 {	
 	JFrame frame;   
@@ -11,7 +12,6 @@ class calc  implements ActionListener
 	JMenuBar menuBar;
 	JMenu menu;
 	JMenu menu2;
-	JMenu menu3;
 	JPanel panel1;  
 	JPanel panelNorth;  
 	GridLayout grid;
@@ -23,18 +23,31 @@ class calc  implements ActionListener
 	ArrayList<Integer> ee=new ArrayList<Integer>();  		
 	ArrayList<String> store=new ArrayList<String>();  		
 
+	public static void main(String[] args)   //메인
+	{
+		calc cal=new calc();
+		cal.layout();
+	}
 	
-	public calc(){
+	public calc(){   //계산기 클래스 생성
 		frame=new JFrame("Calculator_by_김재현");
 		menuBar=new JMenuBar();
 
-		panel1=new JPanel();
+		panel1=new JPanel();              //계산기부분
 		panelNorth=new JPanel();
 		textField=new JTextField("0"); 			
 		textfieldNorth=new JTextField(""); 		
+	
+		
+		menu=new JMenu("메뉴1");		    //메뉴부분
+		JMenu menu1 = new JMenu("대화상자(P)");
+		JMenuItem item1 = new JMenuItem("Open");
+	  item1.setMnemonic('o');
+		menu2=new JMenu("메뉴2");
+		
 	}
 
-	public void layout(){
+	public void layout(){   //레이아웃
 	
 	textField.setHorizontalAlignment(JTextField.RIGHT);  
 		
@@ -51,14 +64,18 @@ class calc  implements ActionListener
 		
 	
 		frame.add(BorderLayout.NORTH,panelNorth); 
-	frame.add(BorderLayout.CENTER,panel1); 		 // 텍스트필드 북쪽에
+    	frame.add(BorderLayout.CENTER,panel1); 		 // 텍스트필드 북쪽에
 		
 		frame.setSize(300,300);                                  
 		frame.setVisible(true);                                  
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+		
+		menuBar.add(menu);		
+		menuBar.add(menu2);
+		frame.setJMenuBar(menuBar);  
 	}	
 	
-	public void actionPerformed(ActionEvent e){
+	public void actionPerformed(ActionEvent e){  //이벤트부분
 		String str=e.getActionCommand();  		
 		String read;				
 		
@@ -131,8 +148,4 @@ class calc  implements ActionListener
 	
 	}
 
-	public static void main(String[] args) 
-	{
-		calc cal=new calc();
-		cal.layout();
-	}}
+}
